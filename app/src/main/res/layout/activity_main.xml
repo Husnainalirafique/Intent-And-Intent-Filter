@@ -1,18 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <EditText
+            android:id="@+id/etToGetUrl"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="101dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Type URL | Text | Phone"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_load_url"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:text="Load Url"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/etToGetUrl"
+            app:layout_constraintHorizontal_bias="0.097"
+            app:layout_constraintStart_toStartOf="@+id/etToGetUrl"
+            app:layout_constraintTop_toBottomOf="@+id/etToGetUrl" />
+
+        <Button
+            android:id="@+id/btToSendData"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:text="Send Data"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/etToGetUrl"
+            app:layout_constraintStart_toEndOf="@+id/button_load_url"
+            app:layout_constraintTop_toBottomOf="@+id/etToGetUrl"></Button>
+
+        <Button
+            android:id="@+id/buttonDial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Dial"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/btToSendData"
+            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintStart_toStartOf="@+id/button_load_url"
+            app:layout_constraintTop_toBottomOf="@+id/button_load_url" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
